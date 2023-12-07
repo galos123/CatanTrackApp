@@ -1,0 +1,36 @@
+/* Container with 3D perspective */
+.flip-image-container {
+	perspective: 1000px;
+	width: 300px; /* Adjust to your preferred size */
+	height: 300px; /* Adjust to your preferred size */
+}
+
+/* Inner wrapper for the flip effect */
+.flip-image-inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: transform 0.6s; /* Smooth transition for the flip */
+	transform-style: preserve-3d;
+}
+
+/* Flipped state for the inner wrapper */
+.flipped {
+	transform: rotateY(180deg);
+}
+
+/* Front and Back images setup */
+.flip-image-front,
+.flip-image-back {
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+/* Back image - initially rotated */
+.flip-image-back {
+	transform: rotateY(180deg);
+}
