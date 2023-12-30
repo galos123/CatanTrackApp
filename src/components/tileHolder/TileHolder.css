@@ -4,4 +4,17 @@
 	grid-template-rows: repeat(3, 1fr);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
+
+	/* Existing styles for background image */
+	background-image: url("path_to_your_image.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	/* Add padding to create space around the grid */
+	padding-top: 15%; /* Adjust the value as needed */
+	padding-bottom: 13%; /* Adjust the value as needed */
+	padding-left: 5%; /* Adjust the value as needed */
+	padding-right: 10%; /* Adjust the value as needed */
+	/* If you don't need padding on the right, you can omit padding-right */
 }

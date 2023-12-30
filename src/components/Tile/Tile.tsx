@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./Tile.css"; // Import your CSS file
+import { TileType } from "../../Types/Types";
 
 interface Props {
-	image1: string;
-	image2: string;
+	item: TileType;
 }
 
 const Tile = (props: Props) => {
 	const [isFlipped, setIsFlipped] = useState(false);
+	const this_tile = props.item;
 
 	const handleClick = () => {
 		setIsFlipped(!isFlipped);
@@ -16,8 +17,8 @@ const Tile = (props: Props) => {
 	return (
 		<div className="flip-image-container" onClick={handleClick}>
 			<div className={`flip-image-inner ${isFlipped ? "flipped" : ""}`}>
-				<img src={props.image1} className="flip-image-front" alt="Image 1" />
-				<img src={props.image2} className="flip-image-back" alt="Image 2" />
+				<img src={this_tile.image1} className="flip-image-front" alt="Image 1" />
+				<img src={this_tile.image2} className="flip-image-back" alt="Image 2" />
 			</div>
 		</div>
 	);
