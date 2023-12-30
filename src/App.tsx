@@ -1,13 +1,11 @@
 import "./App.css";
 import Tile from "./components/Tile/Tile";
+import TileHolder from "./components/tileHolder/TileHolder";
 
 function App() {
 	return (
 		<>
-			<Tile
-				image1="https://th.bing.com/th/id/OIG.ey_KYrwhZnirAkSgDhmg"
-				image2="https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg"
-			/>
+			<TileHolder images={["test1", "test2"]}></TileHolder>
 		</>
 	);
 }
